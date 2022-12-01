@@ -18,30 +18,11 @@ provider "aws" {
 
 }
 
-# # creating vpc
-# resource "aws_vpc" "tech365vpc" {
-#   cidr_block = var.cidr_block[0]
-
-#   tags = {
-#     Name = "tech365vpc"
-#   }
-# }
-
 resource "aws_default_vpc" "default" {
   tags = {
     Name = "Default VPC"
   }
 }
-
-# # creating subnet
-# resource "aws_subnet" "main" {
-#   vpc_id     = aws_vpc.main.vpc-03f7b592376db96d9
-#   cidr_block = var.cidr_block[0]
-
-#   tags = {
-#     Name = "Main"
-#   }
-# }
 
 # provisioing EC2
 resource "aws_instance" "apachesite" {
