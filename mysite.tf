@@ -24,7 +24,7 @@ resource "aws_default_vpc" "default" {
   }
 }
 
-# provisioing EC2
+# provisioning EC2
 resource "aws_instance" "apachesite" {
   ami           = var.ami
   instance_type = "t2.micro"
